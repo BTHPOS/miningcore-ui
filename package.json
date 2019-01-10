@@ -1,0 +1,36 @@
+{
+  "name": "@bithereum/miningcore-ui",
+  "version": "1.0.0",
+  "description": "Mining Core modified to run through a node.js server",
+  "main": "server.js",
+  "dependencies": {
+    "boom": "^7.3.0",
+    "handlebars": "^4.0.12",
+    "handlebars-layouts": "^3.1.4",
+    "hapi": "^17.8.1",
+    "inert": "^5.1.2",
+    "joi": "^14.3.1",
+    "path": "^0.12.7",
+    "vision": "^5.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BTHPOS/miningcore-ui.git"
+  },
+  "keywords": [
+    "bithereum",
+    "miningcore",
+    "nodejs"
+  ],
+  "author": "Dondrey Taylor, Calvin Tam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BTHPOS/miningcore-ui/issues"
+  },
+  "homepage": "https://github.com/BTHPOS/miningcore-ui#readme"
+}
