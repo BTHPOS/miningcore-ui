@@ -107,7 +107,7 @@ var initialization = async function() {
 
 	server.route({
 			method: 'GET',
-			path: '/api/{endpoint}',
+			path: '/api/{endpoint*}',
 			handler: function(request, reply)
 			{
 					return new Promise(function(accept, reject) {
