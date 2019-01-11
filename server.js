@@ -47,7 +47,7 @@ var initialization = async function() {
 			path: '/',
 			handler: function(request, reply)
 			{
-					return reply.view('dashboard', {});
+					return reply.view('stats', {});
 			}
 	});
 
