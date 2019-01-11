@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "boom": "^7.3.0",
+    "got": "^9.5.0",
     "handlebars": "^4.0.12",
     "handlebars-layouts": "^3.1.4",
     "hapi": "^17.8.1",

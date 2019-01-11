@@ -5,6 +5,7 @@ var Path    = require('path');
 var Hapi    = require('hapi');
 var Vision 	= require('vision');
 var Inert 	= require('inert');
+var got 		= require('got');
 
 // Template Engine
 var Handlerbars = require('handlebars');
@@ -101,6 +102,25 @@ var initialization = async function() {
 			handler: function(request, reply)
 			{
 					return reply.view('dashboard', {});
+			}
+	});
+
+	server.route({
+			method: 'GET',
+			path: '/api/{endpoint}',
+			handler: function(request, reply)
+			{
+					return new Promise(function(accept, reject) {
+								got('http://localhost:4000' + request.url.href)
+									.then(function(response) {
+										 	try {
+												accept(JSON.parse(response.body));
+											}
+											catch(e) {
+												 accept({});
+											};
+									})
+					});
 			}
 	});
 
